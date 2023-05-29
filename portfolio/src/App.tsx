@@ -1,5 +1,7 @@
 // import Homepage from "./pages/homepage"
+import './App.scss'
 import Header from "./components/Header/header"
+import Footer from './components/Footer/footer'
 
 
 const App = () => {
@@ -8,6 +10,7 @@ const App = () => {
       <div>
         {/* <Homepage /> */}
         <Header />
+        <Footer />  
       </div>
   )
 }
