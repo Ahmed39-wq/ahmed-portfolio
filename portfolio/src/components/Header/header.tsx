@@ -1,11 +1,10 @@
-// import React from 'react'
 import '../Header/header.scss'
 
 const Header = () => {
   return (
     <div className="header">
       <div className="name">
-        <span>Maya Nelson </span> | Project Manager
+        <span>Maya Nelson </span> | Product Manager
       </div>
       <div className="options">
         <li>About Me</li>

@@ -1,4 +1,3 @@
-// import React from 'react'
 import './footer.scss'
 // import { Link } from 'react-router-dom'
 import Facebook from '../../assets/facebook-app-symbol.png'

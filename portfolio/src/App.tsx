@@ -1,16 +1,12 @@
-// import Homepage from "./pages/homepage"
 import './App.scss'
-import Header from "./components/Header/header"
-import Footer from './components/Footer/footer'
+import Homepage from './pages/homepage'
 
 
 const App = () => {
 
   return (
       <div>
-        {/* <Homepage /> */}
-        <Header />
-        <Footer />  
+        <Homepage />
       </div>
   )
 }

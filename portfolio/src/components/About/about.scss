@@ -1,0 +1,57 @@
+.text {
+
+    h1 {
+        font-size: 120px;
+    }
+
+    span {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 25px;
+        margin-top: 30px;
+        text-align: start;
+        width: 350px;
+    }
+
+}
+
+.buttons {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+    
+    button {
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 500px;
+        text-transform: uppercase;
+        
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+            transition: .3s ease-in-out;
+        }
+    }
+    
+}
+
+.resume {
+    background: #007FFF;
+    color: white; 
+    border: none;
+}
+
+.projects {
+    background: white;
+    border: 1px solid black;
+
+    &:hover {
+        background: rgb(243, 243, 243);
+    }
+}
