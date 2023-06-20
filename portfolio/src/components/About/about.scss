@@ -34,7 +34,7 @@
         
         &:hover {
             cursor: pointer;
-            opacity: .8;
+            // opacity: .8;
             transition: .3s ease-in-out;
         }
     }
@@ -45,6 +45,12 @@
     background: #007FFF;
     color: white; 
     border: none;
+
+    &:hover {
+        background: white;
+        color: #007FFF;
+        border: 1px solid #007FFF
+    }
 }
 
 .projects {
@@ -52,6 +58,8 @@
     border: 1px solid black;
 
     &:hover {
-        background: rgb(243, 243, 243);
+        background: #007FFF;
+        color: white;
+        border: 1px solid #007FFF
     }
 }
