@@ -1,8 +1,8 @@
-import Header from "../components/Header/header"
-import Footer from "../components/Footer/footer"
-import Profile from "../components/Profile/profile"
-import About from "../components/About/about"
-import "../pages/homepage.scss"
+import Header from "../../components/Header/header"
+import Footer from "../../components/Footer/footer"
+import Profile from "../../components/Profile/profile"
+import About from "../About/about"
+import "./homepage.scss"
 
 const Homepage = () => {
   return (

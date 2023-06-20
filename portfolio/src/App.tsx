@@ -1,13 +1,21 @@
 import './App.scss'
-// import Homepage from './pages/homepage'
-import Contact from './components/Contact/contact'
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import Contact from './pages/Contact/contact'
+import Homepage from './pages/Homepage/homepage'
+import Projects from './pages/Projects/projects'
 
 const App = () => {
 
   return (
       <div>
-        {/* <Homepage /> */}
-        <Contact />
+        <Router>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/projects' element={<Projects />} />
+            {/* <Route path='/resume' element={<Resume />} /> */}
+          </Routes>
+        </Router>
       </div>
   )
 }

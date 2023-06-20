@@ -1,0 +1,32 @@
+
+.project {
+    background: #ffebcd;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.title {
+    width: 80%;
+    background: red;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.project-title {
+    text-align: center;
+    width: 50%;
+    height: 200px;
+    background: yellow;
+    
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 17px;
+        margin-top: 20px;
+    }
+}

@@ -1,5 +1,4 @@
 .text {
-
     h1 {
         font-size: 120px;
     }
@@ -29,7 +28,7 @@
         height: 40px;
         border-radius: 20px;
         font-size: 16px;
-        font-weight: 500px;
+        font-weight: 700px;
         text-transform: uppercase;
         
         &:hover {
@@ -55,7 +54,8 @@
 
 .projects {
     background: white;
-    border: 1px solid black;
+    border: 1px solid #007FFF;
+    color: #007FFF;
 
     &:hover {
         background: #007FFF;
