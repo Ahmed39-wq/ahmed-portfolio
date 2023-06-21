@@ -1,0 +1,30 @@
+.resume-container {
+    background: #ffebcd;
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.resumee {
+    width: 50%;
+    background: red;
+    margin-top: 200px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.resume-title {
+    text-align: center;
+    width: 50%;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        font-size: 40px;
+    }
+}
