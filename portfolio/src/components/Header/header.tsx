@@ -9,7 +9,7 @@ const Header = () => {
       </div>
       <div className="options">
         <NavLink to={"/"} id='nav-links'>
-          About Me
+          About
         </NavLink>
         <NavLink to={"/resume"} id='nav-links'>
           Resume

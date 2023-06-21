@@ -1,25 +1,30 @@
 
-.project {
+.project-container {
     background: #ffebcd;
     display: flex;
     // flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    // height: 100vh;
+    
 }
 
-.title {
+.section {
     width: 80%;
-    background: red;
-    margin-top: 150px;
+    // background: red;
+    margin-top: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
 }
+
 
 .project-title {
     text-align: center;
     width: 50%;
     height: 200px;
-    background: yellow;
+    // background: yellow;
     
     h1 {
         font-size: 40px;
@@ -29,4 +34,20 @@
         font-size: 17px;
         margin-top: 20px;
     }
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 15px;
+}
+
+.card {
+    min-width: 600px;
+    height: 400px;
+    background: #f0f8ff;
+    // background: blue;
+    cursor: pointer;
+    padding-left: 30px;
 }
