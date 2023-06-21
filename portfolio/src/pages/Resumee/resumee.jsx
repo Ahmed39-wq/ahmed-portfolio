@@ -11,7 +11,10 @@ const Resume = () => {
       <section className='resumee'>
         <div className="resume-title">
           <h1>Resume</h1>
-
+        </div>
+        <div className="experience">
+          <h1>Experience</h1>
+          <button>Download CV</button>
         </div>
       </section>
     </div>
