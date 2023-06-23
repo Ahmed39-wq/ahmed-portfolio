@@ -1,0 +1,56 @@
+.experience-card-container {
+    margin-top: 30px;
+    width: 100%;
+    box-shadow: 0px 0px 21px rgba(0,0,0,.25);
+  }
+  
+  .experience-cards {
+    // height: 350px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .inner {
+    height: 150px;
+    background: #f0f8ff;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  
+  .inner-left {
+    // background: yellow;
+    height: 150px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  
+    h3 {
+      font-size: 20px;
+      color: #007fff;
+    }
+  
+    h4 {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+  
+    span {
+      font-size: 16px;
+    }
+  }
+  
+  .inner-right {
+    // background: yellow;
+    height: 150px;
+    width: 70%;
+    margin-left: 20px;
+    line-height: 25px;
+  }

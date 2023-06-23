@@ -18,8 +18,20 @@
 .profile-pic {
     width: 200px;
     height: 200px;
-    background: black;
+    background: grey;
     border-radius: 50%;
+    position: relative;
+
+    img {
+        width: 30px;
+        position: absolute;
+        right: 10px;
+        top: 150px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .role {

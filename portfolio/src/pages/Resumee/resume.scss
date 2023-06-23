@@ -1,62 +1,64 @@
 .resume-container {
-    background: #ffebcd;
-    display: flex;
-    // flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+  background: #ffebcd;
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  // height: 100vh;
 }
 
 .resumee {
-    width: 50%;
-    // background: red;
-    margin-top: 200px;
-    display: flex;
-    // justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 100px;
+  width: 50%;
+  // height: 100%;
+  // background: red;
+  margin-top: 200px;
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
 
 .resume-title {
-    text-align: center;
-    width: 50%;
-    display: flex;
-    justify-content: center;
+  text-align: center;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  // background-color: yellow;
 
-    h1 {
-        font-size: 40px;
-    }
+  h1 {
+    font-size: 40px;
+  }
 }
 
 .experience {
-    width: 100%;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  // background: green;
 
-    h1 {
-        font-size: 30px;
-        font-weight: 700;
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  button {
+    width: 160px;
+    height: 50px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    background: #007fff;
+    color: white;
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      background: white;
+      color: #007fff;
+      border: 1px solid #007fff;
     }
-
-    button {
-        width: 160px;
-        height: 50px;
-        border-radius: 20px;
-        font-size: 18px;
-        font-weight: 700px;
-        text-transform: uppercase;
-        background: #007FFF;
-        color: white;
-        border: none;
-
-        
-        &:hover {
-            cursor: pointer;
-            transition: .3s ease-in-out;
-            background: white;
-            color: #007FFF;
-            border: 1px solid #007FFF
-        }
-    }
+  }
 }
