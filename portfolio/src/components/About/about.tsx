@@ -6,7 +6,7 @@ const About = () => {
     <div>
         <div className="text">
             <h1>Hello</h1>
-            <span>Here's what I am and what I do</span>
+            <span>Here's who I am and what I do</span>
             <div className='buttons'>
               <Link to={'/resume'}>
                 <button className='resume'>Resume</button>
