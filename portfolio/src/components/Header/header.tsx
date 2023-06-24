@@ -1,28 +1,42 @@
-import '../Header/header.scss'
-import {NavLink} from 'react-router-dom'
+import { useState } from "react";
+import "../Header/header.scss";
+import { NavLink } from "react-router-dom";
+import { FaTimes, FaBars } from "react-icons/fa";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const showNavbar = () => {
+    setIsOpen(open => !open)
+  };
+
   return (
-    <div className="header">
-      <div className="name">
-        <span>Maya Nelson </span> | Product Manager
-      </div>
-      <div className="options">
-        <NavLink to={"/"} id='nav-links'>
+    <header>
+      <h3>
+        Maya Nelson
+      </h3>
+      <nav className={`nav_menu ${isOpen ? 'responsive_nav' : ''}`} >
+        <NavLink to={"/"} id="nav-links">
           About
         </NavLink>
-        <NavLink to={"/resume"} id='nav-links'>
+        <NavLink to={"/resume"} id="nav-links">
           Resume
         </NavLink>
-        <NavLink to={"/projects"} id='nav-links'>
+        <NavLink to={"/projects"} id="nav-links">
           Projects
         </NavLink>
-        <NavLink to={"/contact"} id='nav-links'>
+        <NavLink to={"/contact"} id="nav-links">
           Contact
         </NavLink>
-      </div>
-    </div>
-  )
-}
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
+      </nav>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
+  );
+};
 
-export default Header
+export default Header;
