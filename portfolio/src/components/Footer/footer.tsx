@@ -14,15 +14,15 @@ function Footer() {
 
       <div className="social">
         <div className="call">
-          <span>Call</span>
-          233 245 985 623
+          <h3>Call</h3>
+          <span>233 245 985 623</span>
         </div>
         <div className="write">
-          <span>Write</span>
-          info@ahmedjr.com
+          <h3>Write</h3>
+          <span>info@ahmedjr.com</span>
         </div>
         <div className="follow">
-          <span>Follow</span>
+          <h3>Follow</h3>
           <div className="icons">
             {/* <Link to="/"> */}
               <img src={Facebook} alt="" />  
