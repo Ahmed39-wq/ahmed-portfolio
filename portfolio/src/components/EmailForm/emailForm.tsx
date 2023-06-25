@@ -1,26 +1,43 @@
 import { useFormik } from "formik";
 import "./emailForm.scss";
 import { FormValues, emailSchema } from "../../schema";
+import axios from 'axios'
 
 const EmailForm = () => {
-    
-  const onSubmit = (values: FormValues, actions: any) => {
-    console.log(values);
-    actions.resetForm();
+  const onSubmit = async (values: FormValues, actions: any) => {
+    try {
+        await axios.post('https://faisaltuts.pythonanywhere.com/send-mail', {
+            email: values.email,
+            subject: values.subject,
+            message: values.message,
+        })
+        console.log('Email sent successfully');
+        actions.resetForm();
+    }
+    catch(error) {
+        console.error('Failed to send email:', error)
+    }
   };
 
-  const { values, errors, touched, isSubmitting, handleChange, handleSubmit } =
-    useFormik<FormValues>({
-      initialValues: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        subject: "",
-        message: "",
-      },
-      validationSchema: emailSchema,
-      onSubmit: onSubmit,
-    });
+  const {
+    values,
+    errors,
+    touched,
+    isSubmitting,
+    handleChange,
+    handleSubmit,
+    handleBlur,
+  } = useFormik<FormValues>({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: emailSchema,
+    onSubmit: onSubmit,
+  });
 
   return (
     <div>
@@ -34,13 +51,14 @@ const EmailForm = () => {
               type="text"
               value={values.firstName}
               onChange={handleChange}
+              onBlur={handleBlur}
               className={`${
                 errors.firstName && touched.firstName ? "input_error" : ""
               }`}
             />
-            {errors.firstName ? (
+            {errors.firstName && touched.firstName && (
               <p className="errors">{errors.firstName}</p>
-            ) : null}
+            )}
           </div>
 
           <div className="lastname">
@@ -51,13 +69,14 @@ const EmailForm = () => {
               type="text"
               value={values.lastName}
               onChange={handleChange}
+              onBlur={handleBlur}
               className={`${
                 errors.lastName && touched.lastName ? "input_error" : ""
               }`}
             />
-            {errors.lastName ? (
+            {errors.lastName && touched.lastName && (
               <p className="errors">{errors.lastName}</p>
-            ) : null}
+            )}
           </div>
         </div>
 
@@ -69,9 +88,12 @@ const EmailForm = () => {
             type="text"
             value={values.email}
             onChange={handleChange}
+            onBlur={handleBlur}
             className={`${errors.email && touched.email ? "input_error" : ""}`}
           />
-          {errors.email ? <p className="errors">{errors.email}</p> : null}
+          {errors.email && touched.email && (
+            <p className="errors">{errors.email}</p>
+          )}
         </div>
 
         <div className="subject">
@@ -92,11 +114,14 @@ const EmailForm = () => {
             name="message"
             value={values.message}
             onChange={handleChange}
+            onBlur={handleBlur}
             className={`${
               errors.message && touched.message ? "input_error" : ""
             }`}
           />
-          {errors.message ? <p className="errors">{errors.message}</p> : null}
+          {errors.message && touched.message && (
+            <p className="errors">{errors.message}</p>
+          )}
         </div>
         <button disabled={isSubmitting} type="submit" className="send">
           Send

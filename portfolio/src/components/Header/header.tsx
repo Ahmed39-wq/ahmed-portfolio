@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header>
       <h3>
-        Maya Nelson
+        Ahmed Jr
       </h3>
       <nav className={`nav_menu ${isOpen ? 'responsive_nav' : ''}`} >
         <NavLink to={"/"} id="nav-links">
