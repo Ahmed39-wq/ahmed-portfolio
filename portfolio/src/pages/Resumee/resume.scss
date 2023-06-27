@@ -1,3 +1,6 @@
+@import '../../breakpoints/breakpoints.scss';
+@import 'include-media';
+
 .resume-container {
   background: #ffebcd;
   display: flex;
@@ -6,11 +9,15 @@
 
 .resumee {
   width: 50%;
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-bottom: 100px;
+
+  @include media('<=phone') {
+    margin-top: 80px;
+  }
 }
 
 .resume-title {
@@ -18,7 +25,6 @@
   width: 50%;
   display: flex;
   justify-content: center;
-  // background-color: yellow;
 
   h1 {
     font-size: 40px;
@@ -30,7 +36,6 @@
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  // background: green;
 
   h1 {
     font-size: 30px;
@@ -40,20 +45,32 @@
   button {
     width: 160px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 18px;
     font-weight: 700px;
     text-transform: uppercase;
     background: #007fff;
     color: white;
+    font-weight: 700;
     border: none;
 
     &:hover {
       cursor: pointer;
-      transition: 0.3s ease-in-out;
-      background: white;
-      color: #007fff;
-      border: 1px solid #007fff;
+      opacity: .9;
     }
+  }
+
+  @include media('<=tablet') {
+    width: 90vw;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  button {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
   }
 }
