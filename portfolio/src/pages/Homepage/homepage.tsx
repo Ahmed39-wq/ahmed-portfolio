@@ -11,10 +11,10 @@ const Homepage = () => {
       <div>
         <section className="main">
           <div className="left-rect"></div>
-        <div className="profile-container">
-          <Profile />
-          <About />
-        </div>
+          <div className="profile-container">
+            <Profile />
+            <About />
+          </div>
         </section>
       </div>
       <Footer />

@@ -40,6 +40,7 @@ header {
       transition: 1s;
       transform: translateY(-100vh);
       background: #f0f8ff;
+      z-index: 10;
       
       
       &.responsive_nav {

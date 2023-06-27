@@ -20,9 +20,6 @@
         margin-top: 70px;
     }
 
-    @include media('<=tablet') {
-        width: 90vw;
-    }
 }
 
 
@@ -46,17 +43,29 @@
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
     margin-top: 30px;
-
-    // @include media('<=tablet') {
-    //     width: 90vw;
-    //     grid-template-columns: 0;
-    //     grid-template-rows: repeat(4, 1fr);
-    // }
-}
+  
+    @include media('<=tablet') {
+      width: 90vw;
+      flex-direction: column;
+      grid-template-columns: 0;
+        grid-template-rows: 1fr 1fr;
+    }
+  
+    @include media('<=phone') {
+        grid-template-columns: 0;
+        grid-template-rows: 1fr 1fr;
+    }
+  
+    @include media('>=desktop') {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  
 
 .card {
     min-width: 600px;
@@ -97,16 +106,17 @@
     @include media('<=tablet') {
         min-width: 90vw;
         flex-direction: column;
-
+        
         p {
             width: 450px;
         }
     }
-
+    
     @include media('<=phone') {
+        padding-right: 20px;
 
         p {
-            width: 330px;
+            width: 300px;
         }
     }
 }
@@ -114,7 +124,6 @@
 .card-sec {
     width: 200px;
     height: 100%;
-    // background: #f0f8ff;
     background: #007FFF;
     border-radius:0 10px 10px 0;
     position: absolute;
