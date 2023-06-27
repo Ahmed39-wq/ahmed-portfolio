@@ -1,37 +1,46 @@
+@import '../../breakpoints/breakpoints.scss';
+@import 'include-media';
 
 .project-container {
     background: #ffebcd;
     display: flex;
-    // flex-direction: column;
     justify-content: center;
-    // height: 100vh;
 }
 
 .section {
     width: 80%;
-    // background: red;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 100px;
+
+    @include media('<=phone') {
+        margin-top: 70px;
+    }
+
+    @include media('<=tablet') {
+        width: 90vw;
+    }
 }
 
 
 .project-title {
     text-align: center;
     width: 50%;
-    height: 200px;
-    // background: yellow;
     
     h1 {
         font-size: 40px;
     }
 
     p {
-        font-size: 17px;
+        font-size: 16px;
         margin-top: 20px;
+    }
+
+    @include media('<=tablet') {
+        width: 90vw;
     }
 }
 
@@ -40,17 +49,24 @@
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 15px;
+    margin-top: 30px;
+
+    // @include media('<=tablet') {
+    //     width: 90vw;
+    //     grid-template-columns: 0;
+    //     grid-template-rows: repeat(4, 1fr);
+    // }
 }
 
 .card {
     min-width: 600px;
-    height: 300px;
     background: #fff;
-    // background: blue;
     cursor: pointer;
     border-radius: 10px;
     position: relative;
     padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
 
     
     .side-line {
@@ -78,19 +94,34 @@
         width: 350px;
     }
 
-    // &:hover {
-    //     transform: scale(1.04);
-    //     transition: .3s ease-in-out;
-    // }
+    @include media('<=tablet') {
+        min-width: 90vw;
+        flex-direction: column;
+
+        p {
+            width: 450px;
+        }
+    }
+
+    @include media('<=phone') {
+
+        p {
+            width: 330px;
+        }
+    }
 }
 
 .card-sec {
     width: 200px;
-    height: 300px;
+    height: 100%;
     // background: #f0f8ff;
     background: #007FFF;
     border-radius:0 10px 10px 0;
     position: absolute;
     right: 0;
     top: 0;
+
+    @include media('<=phone') {
+        display: none;
+    }
 }

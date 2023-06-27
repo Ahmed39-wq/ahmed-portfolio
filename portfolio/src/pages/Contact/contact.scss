@@ -23,7 +23,7 @@ main {
   }
 
   @include media('<=tablet') {
-    width: 60%;
+    width: 90vw;
     padding: 30px;
   }
 }
