@@ -9,6 +9,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  // z-index: 10;
+  // position: fix;
 
   @include media("<=phone") {
     height: 300px;
@@ -17,10 +19,6 @@
     justify-content: space-between;
     flex-direction: column-reverse;
   }
-
-  // @include media('<=tablet') {
-  //   height: 100px;
-  // }
 }
 
 .copyright {
@@ -33,10 +31,6 @@
   display: flex;
   justify-content: space-between;
   gap: 50px;
-
-//   h3 {
-//     font-size: px;
-//   }
 
   @include media("<=tablet") {
     flex-direction: row;

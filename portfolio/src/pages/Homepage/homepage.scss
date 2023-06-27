@@ -1,72 +1,54 @@
 @import '../../breakpoints/breakpoints.scss';
 @import 'include-media';
 
-// .main {
-//     width: 100%;
-// }
-
-// .left-rect {
-//     width: 40%;
-//     height: 100vh;
-//     background: #f6d1a2;
-
-//     @include media('<=phone') {
-//         display: none;
-//     }
-// }
-
-// .profile-container {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 50px;
-//     position: absolute;
-//     transform: translate(-50%, -50%);
-//     top: 55%;
-//     left: 50%;
-
-//     @include media('<=phone') {
-//         flex-direction: column;
-//         top: 100%;
-//     }
-
-// }
-
 .main {
     width: 100%;
-  
-    // @include media('>=tablet') {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    // }
-  }
-  
-  .left-rect {
-    width: 40%;
-    height: 100vh;
-    background: #f6d1a2;
-  
-    @include media('<=phone') {
-      display: none;
-    }
-  
-    // @include media('>=tablet') {
-    //   display: none;
-    // }
-  }
-  
-  .profile-container {
+    background: yellow;
+    // height: 100%;
+}
+
+.container {
     display: flex;
-    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    // margin-left: 0;
+}
+
+.left-rect {
+    width: 40%;
+    height: 700px;
+    background: #f6d1a2;
+    // display: flex;
+    // // flex-direction: row;
+    // justify-content: center;
+    // align-items: center;
+    // @include media('<=phone') {
+    //     display: none;
+    // }
+}
+
+.profile-container {
+    display: flex;
+    // flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 50px;
-    position: relative;
-  
-    @include media('<=tablet') {
-      position: static;
-    }
-  }
+    // position: absolute;
+    // transform: translate(-50%, -50%);
+    // top: 55%;
+    // left: 50%;
+    // background: red;
+    // width: 100vw;
+
+    // @include media('<=phone') {
+    //     flex-direction: column;
+    //     transform: translate(-50%, -50%);
+    //     top: 100%;
+    //     left: 50%;
+    //     width: 90vw;
+    // }
+
+}
+
+
   

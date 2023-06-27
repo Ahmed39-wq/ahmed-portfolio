@@ -8,16 +8,18 @@ const Homepage = () => {
   return (
     <div>
       <Header />
-      <div>
-        <section className="main">
-          <div className="left-rect"></div>
-          <div className="profile-container">
-            <Profile />
-            <About />
+        <div className="main">
+          <div className="container">
+            <div className="left-rect">
+            </div>
+            <div className="profile-container">
+              <Profile />
+              <About />
+            </div>
+
           </div>
-        </section>
-      </div>
-      <Footer />
+        </div>
+          <Footer />
     </div>
   )
 }
