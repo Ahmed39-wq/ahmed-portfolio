@@ -26,15 +26,14 @@
     button {
         width: 120px;
         height: 40px;
-        border-radius: 20px;
+        border-radius: 10px;
         font-size: 16px;
         font-weight: 700px;
         text-transform: uppercase;
         
         &:hover {
             cursor: pointer;
-            // opacity: .8;
-            transition: .3s ease-in-out;
+            opacity: .9;
         }
     }
     
@@ -44,12 +43,6 @@
     background: #007FFF;
     color: white; 
     border: none;
-
-    &:hover {
-        background: white;
-        color: #007FFF;
-        border: 1px solid #007FFF
-    }
 }
 
 .projects {
@@ -60,6 +53,7 @@
     &:hover {
         background: #007FFF;
         color: white;
-        border: 1px solid #007FFF
+        border: 1px solid #007FFF;
+        transition: .3s ease-in-out;
     }
 }
