@@ -1,21 +1,20 @@
 import { useFormik } from "formik";
 import "./emailForm.scss";
 import { FormValues, emailSchema } from "../../schema";
-import axios from 'axios'
+import axios from "axios";
 
 const EmailForm = () => {
   const onSubmit = async (values: FormValues, actions: any) => {
     try {
-        await axios.post('https://faisaltuts.pythonanywhere.com/send-mail', {
-            email: values.email,
-            subject: values.subject,
-            message: values.message,
-        })
-        console.log('Email sent successfully');
-        actions.resetForm();
-    }
-    catch(error) {
-        console.error('Failed to send email:', error)
+      await axios.post("https://faisaltuts.pythonanywhere.com/send-mail", {
+        email: values.email,
+        subject: values.subject,
+        message: values.message,
+      });
+      console.log("Email sent successfully");
+      actions.resetForm();
+    } catch (error) {
+      console.error("Failed to send email:", error);
     }
   };
 
@@ -43,7 +42,7 @@ const EmailForm = () => {
     <div>
       <form onSubmit={handleSubmit} autoComplete="off">
         <div className="names">
-          <div className="firstname">
+          {/* <div className="firstname">
             <label htmlFor="">First Name</label>
             <input
               id="firstName"
@@ -59,9 +58,9 @@ const EmailForm = () => {
             {errors.firstName && touched.firstName && (
               <p className="errors">{errors.firstName}</p>
             )}
-          </div>
+          </div> */}
 
-          <div className="lastname">
+          {/* <div className="lastname">
             <label htmlFor="">Last Name</label>
             <input
               id="lastName"
@@ -77,10 +76,10 @@ const EmailForm = () => {
             {errors.lastName && touched.lastName && (
               <p className="errors">{errors.lastName}</p>
             )}
-          </div>
+          </div> */}
         </div>
 
-        <div className="email">
+        {/* <div className="email">
           <label htmlFor="">E-mail</label>
           <input
             id="email"
@@ -94,7 +93,7 @@ const EmailForm = () => {
           {errors.email && touched.email && (
             <p className="errors">{errors.email}</p>
           )}
-        </div>
+        </div> */}
 
         <div className="subject">
           <label htmlFor="">Subject</label>
@@ -123,9 +122,14 @@ const EmailForm = () => {
             <p className="errors">{errors.message}</p>
           )}
         </div>
-        <button disabled={isSubmitting} type="submit" className="send">
+        <div
+          className="send"
+          onClick={() =>
+            (window.location.href = "mailto:abulfail.rufai@amalitech.com")
+          }
+        >
           Send
-        </button>
+        </div>
       </form>
     </div>
   );
