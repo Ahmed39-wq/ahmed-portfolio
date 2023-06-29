@@ -3,26 +3,34 @@ import Facebook from '../../assets/facebook-app-symbol.png'
 import Twitter from '../../assets/twitter.png'
 import LinkedIn from '../../assets/linkedin.png'
 import Instagram from '../../assets/instagram.png'
-import insertImage from '../../assets/image.png'
+import { Link } from 'react-router-dom'
 
 const Profile = () => {
+
   return (
     <div>
         <div className="profile">
             <div className='profile-info'>
                 <div className="profile-pic">
-                  <img src={insertImage} alt="" />
                 </div>
                 <div className="role">
-                    <h1>Maya Nelson</h1>
+                    <h1>Ahmed Jr</h1>
                     <span>Product Manager</span>
                 </div>
             </div>
             <div className="icon">
-              <img src={Facebook} alt="" />  
-              <img src={Twitter} alt="" /> 
-              <img src={LinkedIn} alt="" />  
-              <img src={Instagram} alt="" />
+              <Link to={"https://www.facebook.com/profile.php?id=100012497585396"}>
+                <img src={Facebook} alt="" />  
+              </Link>
+              <Link to={"https://twitter.com/home"}>
+                <img src={Twitter} alt="" /> 
+              </Link>
+              <Link to={""}>
+                <img src={LinkedIn} alt="" />  
+              </Link>
+              <Link to={""}>
+                <img src={Instagram} alt="" />
+              </Link>
             </div>
         </div>
     </div>

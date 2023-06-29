@@ -23,18 +23,9 @@
     height: 200px;
     background: grey;
     border-radius: 50%;
-    position: relative;
-
-    img {
-        width: 30px;
-        position: absolute;
-        right: 10px;
-        top: 150px;
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
+    background-image: url('../../assets//4053834.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .role {
