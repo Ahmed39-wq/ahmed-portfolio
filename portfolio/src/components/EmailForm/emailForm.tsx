@@ -22,7 +22,6 @@ const EmailForm = () => {
     values,
     errors,
     touched,
-    isSubmitting,
     handleChange,
     handleSubmit,
     handleBlur,
@@ -79,7 +78,7 @@ const EmailForm = () => {
           </div> */}
         </div>
 
-        {/* <div className="email">
+        <div className="email">
           <label htmlFor="">E-mail</label>
           <input
             id="email"
@@ -93,7 +92,7 @@ const EmailForm = () => {
           {errors.email && touched.email && (
             <p className="errors">{errors.email}</p>
           )}
-        </div> */}
+        </div>
 
         <div className="subject">
           <label htmlFor="">Subject</label>
